@@ -17,7 +17,7 @@ blurb: "In early 2015, I decided to give form to an idea that had long been simm
       <div class="col-md-6 col-xl-4 showcase">
         <a href="{{ product.url | url }}" class="showcase__link">
           <figure class="showcase__img">
-            <img src="{{ site.cloudinary_url }}/f_auto/t_product_thumb/f_auto/{{ product.fileSlug }}-cover" class="img-fluid" width="1500" height="1001">
+            <img src="{{ site.cloudinary_url }}/f_auto/t_product_thumb/f_auto/{{ product.fileSlug }}-cover" class="img-fluid" width="1500" height="1001" loading="lazy">
             <figcaption class="pt-2 text-left">
               {{ product.data.title }}
             </figcaption>
