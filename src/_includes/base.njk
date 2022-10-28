@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% if helpers.env === 'production' %}
+    <link rel="preload" href="/fonts/work-sans-v18-latin-regular.woff2" as="font" type="font/woff" crossorigin/>
+    <link rel="preload" href="/fonts/work-sans-v18-latin-regular.woff" as="font" type="font/woff2" crossorigin/>
+    <link rel="preload" href="/fonts/work-sans-v18-latin-italic.woff2" as="font" type="font/woff" crossorigin/>
+    <link rel="preload" href="/fonts/work-sans-v18-latin-italic.woff" as="font" type="font/woff2" crossorigin/>
+    <link rel="preload" href="/fonts/work-sans-v18-latin-500.woff2" as="font" type="font/woff" crossorigin/>
+    <link rel="preload" href="/fonts/work-sans-v18-latin-500.woff" as="font" type="font/woff2" crossorigin/>
+    <link rel="preload" href="/fonts/work-sans-v18-latin-900.woff2" as="font" type="font/woff" crossorigin/>
+    <link rel="preload" href="/fonts/work-sans-v18-latin-900.woff" as="font" type="font/woff2" crossorigin/>
+  {% endif %}
+  <meta charset="UTF-8">
+  <title>
+    {{ title + ' | ' + site.title if title and title != 'With Brio' else site.title}}
+  </title>
+  <meta name="description" content="{{ site.meta_desc }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% include "meta_icons.njk" %}
+  {%- include "og.njk" %}
+  {% if site.env === 'production' %}
+    <link rel="preconnect" href="//res.cloudinary.com">
+    <link rel="dns-prefetch" href="//res.cloudinary.com">
+  {% endif %}
+  {% block head %}{% endblock %}
+  {% set css %}
+    @font-face {
+      font-family: 'Work Sans';
+      font-style: normal;
+      font-display: swap;
+      font-weight: 400;
+      src: local(''),
+          url('/fonts/work-sans-v18-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('/fonts/work-sans-v18-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    @font-face {
+      font-family: 'Work Sans';
+      font-style: normal;
+      font-display: swap;
+      font-weight: 500;
+      src: local(''),
+          url('/fonts/work-sans-v18-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('/fonts/work-sans-v18-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    @font-face {
+      font-family: 'Work Sans';
+      font-style: normal;
+      font-display: swap;
+      font-weight: 900;
+      src: local(''),
+          url('/fonts/work-sans-v18-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('/fonts/work-sans-v18-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    @font-face {
+      font-family: 'Work Sans';
+      font-style: italic;
+      font-display: swap;
+      font-weight: 400;
+      src: local(''),
+          url('/fonts/work-sans-v18-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('/fonts/work-sans-v18-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    {% include "css/site.css" %}
+  {% endset %}
+  <style>
+    {% if helpers.env === 'production' %}
+      {{ css | cssmin | safe }}
+    {% else %}
+      {{ css | safe }}
+    {% endif %}
+  </style>
+</head>
+<body>
+  <header role="banner" class="site-header">
+    {% include "nav.njk" %}
+  </header>
+  <main role="main" class="site-main">
+    {{ content | safe }}
+  </main>
+  <footer role="contentinfo" class="site-footer px-2 text-center">
+    This site does not track you. Come and go as you please. Happy Trails!
+    <p style="font-size:0.8rem;color:#666">Last updated: {{ buildTime.time.formatted }}</p>
+  </footer>
+</body>
+</html>

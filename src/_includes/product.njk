@@ -1,0 +1,83 @@
+---
+layout: base.njk
+---
+
+<header class="page-header">
+  <div class="container-fluid container-fluid--maxwidth">
+    <div class="row">
+      <div class="col-xl-6">
+        <div class="row justify-content-between">
+          <div class="col-xl-8">
+            <div class="page-header__title">
+                {{ title }}
+            </div>
+          </div>
+          {% if specs %}
+            <div class="col-xl-3">
+              <ul class="page-header__specs">
+                {% for spec in specs %}
+                  <li>
+                    {{ spec }}
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div class="page-header__blurb">
+          {{ content | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="page-section page-section--compact-top">
+  <div class="container-fluid container-fluid--maxwidth mb-5">
+    <img src="{{ site.cloudinary_url }}c_fill,w_2000,f_auto/{{ page.fileSlug }}" class="img-fluid" loading="lazy">
+  </div>
+  <div class="container text-center">
+    {% for pic in images %}
+      <img src="{{ site.cloudinary_url }}c_fill,w_2000,f_auto/{{ page.fileSlug }}-{{ loop.index }}" class="img-fluid{{ ' mb-5' if not loop.last }}" loading="lazy">
+    {% endfor %}
+  </div>
+</div>
+
+<div class="page-section page-section--compact-top">
+  <div class="container">
+    <div class="row justify-content-md-between mb-5">
+      <div class="col-12 col-lg-6">
+        <dl class="list-more text-lg-right">
+          <dt>Available at:</dt>
+            {% for retailer in retailers %}
+              <dd>
+                <a href="{{ retailer.url }}" target="_blank">
+                  {{ retailer.name }}
+                </a>
+              </dd>
+            {% endfor %}
+        </dl>
+      </div>
+    </div>
+      <div class="row justify-content-md-between">
+      <div class="col-12 col-lg-6 ml-lg-auto">
+        <dl class="list-more">
+          <dt>
+            You Might Also Like
+          </dt>
+          {%- for product in collections.orderedProducts | allButCurrent(page.url) %}
+          <dd>
+            <a href="{{ product.url | url }}">
+              {{ product.data.title }}
+            </a>
+          </dd>
+          {%- endfor -%}
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>
+
+

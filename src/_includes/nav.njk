@@ -1,0 +1,23 @@
+
+{% set currentUrl %}{{ page.fileSlug }}{% endset %}
+
+<div class="container-fluid container-fluid--maxwidth">
+  <nav class="row justify-content-between align-items-center">
+    <div class="col-12 col-sm-auto text-center text-sm-left">
+      <a class="brand" href="/">
+        <span>+ brio</span>
+      </a>
+    </div>
+    <div class="col-12 col-sm-auto text-center text-sm-left align-self-center pt-4 pt-sm-0">
+      {% for page in collections.orderedPages %}
+        <a
+          {% if currentUrl === page.fileSlug %}aria-current="page"{% endif %}
+          href="{{ page.url }}"
+          class="menu-item menu-item--header{{ ' active' if currentUrl.includes(page.fileSlug)}}"
+          >
+            {{ page.data.title }}
+        </a>
+      {%- endfor %}
+    </div>
+  </nav>
+</div>

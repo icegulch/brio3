@@ -1,0 +1,47 @@
+---
+title: Contact
+permalink: /contact/
+order: 3
+blurb: "Whether you're interested in a product, my past work, or talking mountains, please feel free to drop me a line. I usually reply within a day, unless I'm out hiking. Suffice it to say, I look forward to hearing from you and promise to reply quickly. Thanks for your time!"
+---
+
+<div class="page-section page-section--compact-top pt-3">
+  <div class="container">
+    <form class="contact-form" name="contact" netlify-honeypot="fu" action="/contact/thank-you" netlify>
+      <div hidden>
+        <label>Don’t fill this out: <input name="fu"></label>
+      </div>
+      <div class="row form-field">
+        <div class="col-sm-6">
+            <label class="form-label">
+              First Name
+            </label>
+            <input class="form-control" type="text" name="first_name">
+        </div>
+        <div class="col-sm-6 mt-4 mt-sm-0">
+            <label class="form-label">
+              Last Name
+            </label>
+            <input class="form-control" type="text" name="last_name">
+        </div>
+      </div>
+      <div class="form-field">
+        <label class="form-label">
+          Email
+        </label>
+        <input class="form-control" type="email" name="email">
+      </div>
+      <div class="form-field">
+        <label class="form-label">
+          Your message
+        </label>
+        <textarea class="form-control" name="message" rows="10"></textarea>
+      </div>
+      <div class="form-field form-field-submit">
+        <button class="button-submit">
+          Send
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+---
+layout: base.njk
+---
+
+<header class="page-header">
+  <div class="container-fluid container-fluid--maxwidth">
+    <div class="row">
+      <div class="col-xl-6">
+        <div class="row justify-content-between">
+          <div class="col-xl-8">
+            <div class="page-header__title">
+              {{ title }}
+            </div>
+          </div>
+          {% if specs %}
+            <div class="col-xl-3">
+              <ul class="page-header__specs">
+                {% for spec in specs %}
+                  <li>
+                    {{ spec }}
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div class="page-header__blurb">
+          {{ blurb | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+{{ content | safe }}
+

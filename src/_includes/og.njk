@@ -1,0 +1,12 @@
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@designwithbrio">
+  <meta name="twitter:title" content="{{ title + ' | ' + site.title if title and title != 'About' else site.title }}">
+  <meta name="twitter:description" content="{{ meta_desc if meta_desc else site.meta_desc }}">
+  <meta name="twitter:image:src" content="{{ site.cloudinary_url + og_img if og_img else site.cloudinary_url + site.og_img }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:url" content="{{ site.domain }}{{ page.url if page.url | slug }}">
+  <meta property="og:title" content="{{ title + ' | ' + site.title if title and title != 'About' else site.title }}">
+  <meta property="og:description" content="{{ meta_desc if meta_desc else site.meta_desc }}">
+  <meta property="og:image" content="{{ site.cloudinary_url + og_img if og_img else site.cloudinary_url + site.og_img }}">
+
