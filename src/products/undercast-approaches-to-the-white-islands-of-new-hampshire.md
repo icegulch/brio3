@@ -8,10 +8,11 @@ specs:
   - Letterpress
   - Foil-stamp
 images:
-  -  ext: '.jpg'
-  -  ext: '.jpg'
-  -  ext: '.jpg'
-  -  ext: '.png'
+  - "id": "undercast-approaches-to-the-white-islands-of-new-hampshire"
+  - "id": "undercast-approaches-to-the-white-islands-of-new-hampshire-1"
+  - "id": "undercast-approaches-to-the-white-islands-of-new-hampshire-2"
+  - "id": "undercast-approaches-to-the-white-islands-of-new-hampshire-3"
+  - "id": "undercast-approaches-to-the-white-islands-of-new-hampshire-4"
 retailers:
   - name: The Mountain Wanderer
     url: "http://www.mountainwanderer.com/"

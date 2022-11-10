@@ -7,9 +7,10 @@ specs:
   - 16" x 20"
   - Foil-stamp
 images:
-  -  ext: '.jpg'
-  -  ext: '.jpg'
-  -  ext: '.jpg'
+  - "id": "topographic-fingerprints-of-the-four-thousand-footers"
+  - "id": "topographic-fingerprints-of-the-four-thousand-footers-1"
+  - "id": "topographic-fingerprints-of-the-four-thousand-footers-2"
+  - "id": "topographic-fingerprints-of-the-four-thousand-footers-3"
 retailers:
   - name: The Mountain Wanderer
     url: "http://www.mountainwanderer.com/"

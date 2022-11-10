@@ -15,14 +15,27 @@ module.exports = function (eleventyConfig) {
     return new CleanCSS({}).minify(code).styles;
   });
 
-  // Allow for inspection
-  eleventyConfig.addFilter("debug", (content) => `${inspect(content)}`);
-
   // Return a subset of an array based on attr
   eleventyConfig.addFilter("allButCurrent", function (arr, currPage) {
     // Filters out current page
     const pageArr = arr.filter((page) => page.url !== currPage);
     return pageArr;
+  });
+
+  eleventyConfig.addFilter("pluckFromSelection", function (arr, selections, attr) {
+    return arr.filter((item) => selections.includes(item[attr]));
+  });
+
+  eleventyConfig.addFilter("pluckByValue", function (arr, value, attr) {
+    return arr.filter((item) => item[attr] === value);
+  });
+
+  eleventyConfig.addFilter("limit", function (arr, limit) {
+    return arr.slice(0, limit);
+  });
+
+  eleventyConfig.addFilter("slice", function (arr, start) {
+    return arr.slice(start, arr.length);
   });
 
   // Helper to sort pages collection by frontmatter "order"

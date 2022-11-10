@@ -8,10 +8,10 @@ specs:
   - Offset printed
   - 80lb pacesetter silk
 images:
-  -  ext: '.jpg'
-  -  ext: '.jpeg'
-  -  ext: '.jpeg'
-  -  ext: '.png'
+  - "id": "periodic-table-of-the-colorado-fourteeners"
+  - "id": "periodic-table-of-the-colorado-fourteeners-1"
+  - "id": "periodic-table-of-the-colorado-fourteeners-2"
+  - "id": "periodic-table-of-the-colorado-fourteeners-3"
 retailers:
   - name: With Brio Studios (on Etsy)
     url: "https://www.etsy.com/listing/904741555/periodic-table-of-the-fifty-something"

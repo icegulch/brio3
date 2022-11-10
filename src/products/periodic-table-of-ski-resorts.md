@@ -8,13 +8,14 @@ specs:
   - 24" x 18"
   - Enhanced Matte Heavyweight Stock
 images:
-  -  ext: '.png'
-  -  ext: '.png'
-  -  ext: '.png'
-  -  ext: '.png'
-  -  ext: '.png'
-  -  ext: '.png'
-  -  ext: '.png'
+  - "id": "periodic-table-of-ski-resorts"
+  - "id": "periodic-table-of-ski-resorts-1"
+  - "id": "periodic-table-of-ski-resorts-2"
+  - "id": "periodic-table-of-ski-resorts-3"
+  - "id": "periodic-table-of-ski-resorts-4"
+  - "id": "periodic-table-of-ski-resorts-5"
+  - "id": "periodic-table-of-ski-resorts-6"
+  - "id": "periodic-table-of-ski-resorts-7"
 retailers:
   - name: Circle Square Diamond
     url: "https://www.circlesquarediamond.com/collections/periodic-table-of-ski-resorts"

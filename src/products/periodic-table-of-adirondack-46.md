@@ -7,8 +7,9 @@ specs:
   - 18" x 24"
   - Offset
 images:
-  - ext: '.jpg'
-  - ext: '.jpg'
+  - "id": "periodic-table-of-adirondack-46"
+  - "id": "periodic-table-of-adirondack-46-1"
+  - "id": "periodic-table-of-adirondack-46-2"
 retailers:
   - name: The Mountain Wanderer
     url: "http://mountainwanderer.com/proddetail.php?prod=POS46"

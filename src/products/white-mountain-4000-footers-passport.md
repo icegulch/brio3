@@ -7,10 +7,11 @@ specs:
   - 3.5" x 5"
   - 52 pages
 images:
-  - ext: '.png'
-  - ext: '.png'
-  - ext: '.png'
-  - ext: '.jpg'
+  - "id": "white-mountain-4000-footers-passport"
+  - "id": "white-mountain-4000-footers-passport-1"
+  - "id": "white-mountain-4000-footers-passport-2"
+  - "id": "white-mountain-4000-footers-passport-3"
+  - "id": "white-mountain-4000-footers-passport-4"
 retailers:
   - name: The Mountain Wanderer
     url: "http://www.mountainwanderer.com/proddetail.php?prod=NHH4000"

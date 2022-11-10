@@ -36,11 +36,15 @@ layout: base.njk
 
 <div class="page-section page-section--compact-top">
   <div class="container-fluid container-fluid--maxwidth mb-5">
-    <img src="{{ site.cloudinary_url }}c_fill,w_2000,f_auto/{{ page.fileSlug }}" class="img-fluid" loading="lazy" alt="Large image of the {{ title }}">
+    {% for pic in images | limit(1) %}
+      {% set productImage = cloudinary.resources | pluckByValue(pic.id, 'public_id') %}
+      <img src="{{ site.cloudinary_url }}c_fill,w_2000,f_auto/{{ productImage[0].public_id }}" class="img-fluid" loading="lazy" alt="Large image of the {{ title }}" width="{{ productImage[0].width }}" height="{{ productImage[0].height }}">
+    {% endfor %}
   </div>
   <div class="container text-center">
-    {% for pic in images %}
-      <img src="{{ site.cloudinary_url }}c_fill,w_2000,f_auto/{{ page.fileSlug }}-{{ loop.index }}" class="img-fluid{{ ' mb-5' if not loop.last }}" loading="lazy" alt="Detailed image {{ loop.index }} of the {{ title }}">
+    {% for pic in images | slice(1) %}
+      {% set productImage = cloudinary.resources | pluckByValue(pic.id, 'public_id') %}
+      <img src="{{ site.cloudinary_url }}c_fill,w_2000,f_auto/{{ productImage[0].public_id }}" class="img-fluid{{ ' mb-5' if not loop.last }}" loading="lazy" alt="Detailed image {{ loop.index }} of the {{ title }}" width="{{ productImage[0].width }}" height="{{ productImage[0].height }}">
     {% endfor %}
   </div>
 </div>

@@ -7,10 +7,11 @@ specs:
   - 18" x 24"
   - Offset
 images:
-  - ext: '.jpg'
-  - ext: '.jpg'
-  - ext: '.jpg'
-  - ext: '.jpg'
+  - "id": "periodic-table-of-white-mountain-4000-footers"
+  - "id": "periodic-table-of-white-mountain-4000-footers-1"
+  - "id": "periodic-table-of-white-mountain-4000-footers-2"
+  - "id": "periodic-table-of-white-mountain-4000-footers-3"
+  - "id": "periodic-table-of-white-mountain-4000-footers-4"
 retailers:
   - name: The Mountain Wanderer
     url: "http://www.mountainwanderer.com/proddetail.php?prod=POS6"

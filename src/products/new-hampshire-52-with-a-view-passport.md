@@ -8,10 +8,11 @@ specs:
   - 56 pages
   - Second Edition
 images:
-  -  ext: '.png'
-  -  ext: '.png'
-  -  ext: '.png'
-  -  ext: '.jpg'
+  - "id": "new-hampshire-52-with-a-view-passport"
+  - "id": "new-hampshire-52-with-a-view-passport-1"
+  - "id": "new-hampshire-52-with-a-view-passport-2"
+  - "id": "new-hampshire-52-with-a-view-passport-3"
+  - "id": "new-hampshire-52-with-a-view-passport-4"
 retailers:
   - name: The Mountain Wanderer
     url: "http://www.mountainwanderer.com/proddetail.php?prod=NHH52"
