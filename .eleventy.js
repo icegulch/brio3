@@ -1,12 +1,11 @@
-// To inspect
-const inspect = require("util").inspect;
-
-// To minify HTML
 const htmlmin = require("html-minifier");
 const CleanCSS = require("clean-css");
-
+require('dotenv').config();
+const isProduction = process.env.ELEVENTY_ENV === `production`;
 
 module.exports = function (eleventyConfig) {
+
+  eleventyConfig.addGlobalData('env', process.env);
 
   // Let some files pass through to public
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
@@ -43,7 +42,7 @@ module.exports = function (eleventyConfig) {
   // Minify HTML Output
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
     // Eleventy 1.0+: use this.inputPath and this.outputPath instead
-    if( outputPath && outputPath.endsWith(".html") ) {
+    if( isProduction && outputPath && outputPath.endsWith(".html") ) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
