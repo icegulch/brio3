@@ -18,7 +18,7 @@ blurb: "Hi! I'm Steve. I'm a New Hampshire native with a Colorado problem. I wor
       <div class="col-md-6 col-xl-4 showcase">
         <a href="{{ product.url | url }}" class="showcase__link">
           <figure class="showcase__img">
-            <img src="{{ site.cloudinary_url }}f_auto/t_product_thumb/f_auto/{{ product.fileSlug }}-cover" class="img-fluid" width="720" height="480" loading="lazy">
+            <img src="{{ site.cloudinary_url }}f_auto/t_product_thumb/f_auto/{{ product.fileSlug }}-cover" class="img-fluid" width="720" height="480" loading="lazy" alt="{{ product.data.title }}">
             <figcaption class="pt-2 text-left">
               {{ product.data.title }}
             </figcaption>
