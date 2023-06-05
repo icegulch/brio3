@@ -13,8 +13,6 @@ images:
   - "id": "periodic-table-of-the-colorado-fourteeners-2"
   - "id": "periodic-table-of-the-colorado-fourteeners-3"
 retailers:
-  - name: With Brio Studios (on Etsy)
-    url: "https://www.etsy.com/listing/904741555/periodic-table-of-the-fifty-something"
   - name: Art Source International
     url: "https://artsourceinternational.com/shop/vintage-posters/periodic-table-of-the-fifty-something-colorado-fourteeners/"
 ---
